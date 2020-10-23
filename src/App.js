@@ -1,25 +1,23 @@
 import React from 'react';
-import {Button,Typography} from '@material-ui/core'
-import {makeStyles} from "@material-ui/core/styles"
-
-const useStyles = makeStyles({
-  helloThereStyle: {
-    fontStyle: "oblique"
-  }
-})
-
+import Grid from '@material-ui/core/Grid'
+import Header from './Header'
+import Content from './Content'
 
 
 function App() {
   return (
-    <div className="">
-      <Typography variant="h2" color="primary">
-        Hello There
-      </Typography>
-       <Button color="primary" variant="outlined">Primary  Button</Button>
-       <Button color=""></Button>
-       <Button color="secondary">This is our material UI Button</Button>
-    </div>
+      <Grid container direction="column">
+        <Grid item>
+         <Header />
+        </Grid>
+        <Grid container>
+           <Grid item xs={0} sm={2} />
+            <Grid item xs={12} sm={8}>
+              <Content/>
+            </Grid>
+           <Grid item xs={0} sm={2} />
+        </Grid>``
+      </Grid>
     
   );
 }
